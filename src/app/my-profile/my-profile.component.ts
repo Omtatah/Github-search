@@ -12,9 +12,18 @@ import{HttpClient} from '@angular/common/http';
 })
 export class MyProfileComponent implements OnInit {
 
-  constructor() { }
+  public username ='Omtatah';
+    repos:Repos;
+    user:User;
 
-  ngOnInit() {
+    constructor(private profileService:ProfileService,public repositoryService:ProfileService) { }
+
+    ngOnInit() {
+      this.profileService.getProfileInfo(this.username);
+      this.user = this.profileService.user;
+
+      this.repositoryService.getProfileRepo(this.username);
+      this.repos = this.repositoryService.repos;
+    }
+
   }
-
-}
