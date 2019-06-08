@@ -4,25 +4,27 @@ import { Search } from '../search';
 import { User } from '../user';
 import { HttpClient } from '@angular/common/http';
 import { Repos } from '../repos';
+
 @Component({
   selector: 'app-search-form',
   templateUrl: './search-form.component.html',
-  styleUrls: ['./search-form.component.css']
+  styleUrls: ['./search-form.component.css'],
+
 })
 export class SearchFormComponent implements OnInit {
-  newSearch = new Search('','','',0);
-  public username ='';
-  repos:Repos;
-  user:User;
+  newSearch = new Search('', '', '', 0);
+  public username = '';
+  repos: Repos;
+  user: User;
 
 
-  submitUser(name){
+  submitUser(name) {
     this.profileService.getProfileInfo(name.value);
     this.repositoryService.getProfileRepo(name.value);
   }
 
 
-  constructor(private profileService:ProfileService,private repositoryService:ProfileService) { }
+  constructor(private profileService: ProfileService, private repositoryService: ProfileService) { }
 
   ngOnInit() {
     this.profileService.getProfileInfo(this.username);
