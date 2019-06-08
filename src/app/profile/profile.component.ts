@@ -10,10 +10,18 @@ import { Repos } from '../repos';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
+  public username ='';
+  repos:Repos;
+  user:User;
 
-  constructor() { }
+  constructor(private profileService:ProfileService,public repositoryService:ProfileService) { }
 
   ngOnInit() {
+    this.profileService.getProfileInfo(this.username);
+    this.user = this.profileService.user;
+
+    this.repositoryService.getProfileRepo(this.username);
+    this.repos = this.repositoryService.repos;
   }
 
 }
