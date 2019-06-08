@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
+import { ProfileService } from '../services/profile.service';
+import { HttpClient } from '@angular/common/http';
+import { Repos } from '../repos';
 
 @Component({
   selector: 'app-profile',
