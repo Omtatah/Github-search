@@ -8,6 +8,7 @@ import{HttpClient} from '@angular/common/http';
   selector: 'app-my-profile',
   templateUrl: './my-profile.component.html',
   styleUrls: ['./my-profile.component.css']
+  providers:[ProfileService]
 })
 export class MyProfileComponent implements OnInit {
 
