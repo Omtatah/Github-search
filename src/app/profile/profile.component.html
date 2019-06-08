@@ -39,3 +39,20 @@
                 <li class="list-group-item" *ngIf="user.created_at" id="emailocation">Account created on: <b>{{user.created_at | date}}</b></li>
               </ul>
             </div>
+            <div class="col-sm-5" id="repo-part">
+
+
+                <span  id="labels">{{user.followers}} Followers</span><br><br>
+                &nbsp;
+                <span  id="labels">{{user.following}} Following</span><br><br>
+                &nbsp;
+                <span  id="labels">{{user.public_repos}} Repositories</span><br>
+                &nbsp;
+
+              <br>
+              <br>
+              <p><a href="{{user.html_url}}" target="_blank" class="btn btn-success btn-sm" id="view"> View profile on Github &nbsp; <span class="glyphicon glyphicon-share-alt"></span></a></p>
+
+
+
+          </div>
