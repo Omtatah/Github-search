@@ -7,6 +7,7 @@ import{HttpClient} from '@angular/common/http';
   selector: 'app-repos',
   templateUrl: './repos.component.html',
   styleUrls: ['./repos.component.css']
+  providers:[ProfileService]
 })
 export class ReposComponent implements OnInit {
 
