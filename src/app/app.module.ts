@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
