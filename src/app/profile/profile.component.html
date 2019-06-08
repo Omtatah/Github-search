@@ -7,7 +7,7 @@
   <br>
   <form action="">
     <div class="form-group">
-    
+
     </div>
     <br>
     <div id="userprofile">
@@ -20,3 +20,15 @@
 
     </div>
   </form>
+  <br>
+  <div *ngIf="user">
+    <div class="panel panel-default">
+      <div class="panel-heading" id="heading">
+        <p class="names"><span class="glyphicon glyphicon-user"></span> &nbsp; {{user.login}}
+          &nbsp;<small>({{user.name}})</small></p>
+      </div>
+      <div class="panel-body" id="body">
+        <div class="row">
+          <div class="col-sm-3">
+            <img src="{{user.avatar_url}}" class="img-circle" alt="">
+          </div>
