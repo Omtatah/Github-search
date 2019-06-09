@@ -12,7 +12,8 @@ import { SearchFormComponent } from './search-form/search-form.component';
 import { FormsModule } from '@angular/forms';
 import { RoutingModule } from './routing/routing.module';
 import { ProfileComponent } from './profile/profile.component';
-import { HoverDirective } from './hover.directive'
+import { HoverDirective } from './hover.directive';
+import { CarouselComponent } from './carousel/carousel.component'
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HoverDirective } from './hover.directive'
     DateCountPipe,
     SearchFormComponent,
     ProfileComponent,
-    HoverDirective
+    HoverDirective,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
