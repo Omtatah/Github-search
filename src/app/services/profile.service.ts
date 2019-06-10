@@ -35,7 +35,7 @@ export class ProfileService {
 
     }
     const promise =new Promise((resolve,reject)=>{
-      this.http.get<ApiResponse>(environment.apiUrl + username + environment.apikey).toPromise().then(response => {
+      this.http.get<ApiResponse>('https://api.github.com/users/' + username + '?access_token=85a853ea537e86b43bc5a3c5b18f4019fba5ee77').toPromise().then(response => {
 
         this.user.name=response.name;
         this.user.login=response.login;
