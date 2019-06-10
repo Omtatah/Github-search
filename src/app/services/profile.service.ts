@@ -71,7 +71,7 @@ getProfileRepo(username){
 
   }
   const promise =new Promise((resolve,reject)=>{
-    this.http.get<ApiResponse>(environment.apiUrl + username +  environment.repoapikey).toPromise().then(response => {
+    this.http.get<ApiResponse>('https://api.github.com/users/' + username +  '/repos?access_token=85a853ea537e86b43bc5a3c5b18f4019fba5ee77').toPromise().then(response => {
   this.user=new User('','','',0,'','','','','','',new Date());
       this.repo=response;
 
